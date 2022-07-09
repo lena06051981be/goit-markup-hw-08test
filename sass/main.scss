@@ -1,0 +1,22 @@
+@import "./base/common";
+@import "./utils/reset";
+@import "./utils/variables";
+@import "./utils/vishidden";
+
+@import "./components/container";
+@import "./components/main-btn";
+@import "./components/mixin";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/details";
+@import "./layout/activity";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/_modal";
+
+@import "./layout/portfolio/portfolio-btn";
+@import "./layout/portfolio/projects";
+
+@import "./utils/mark";

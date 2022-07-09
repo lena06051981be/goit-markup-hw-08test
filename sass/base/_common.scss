@@ -1,0 +1,25 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #212121;
+  background-color: #ffffff;
+}
+
+/* Репета рекомендовал */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* a::before {
+  content: "♥️";
+  color: brown;
+} */
+
+/* Рука-указатель */
+button {
+  cursor: pointer;
+}

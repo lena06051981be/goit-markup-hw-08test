@@ -1,0 +1,197 @@
+/* ---- МОДАЛЬНОЕ ОКНО ---- */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    & .modal {
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background: var(--main-tittle-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+
+  transition: 250ms var(--timing-function);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  &:hover .modal-icon {
+    fill: var(--highlight-color);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* модальное окно не скролится */
+/* .no-scroll {
+  overflow: hidden;
+} */
+
+.modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+}
+
+.modal-form__label {
+  position: relative;
+  display: flex;
+  margin-bottom: 28px;
+  &:focus-within > .modal-form__input,
+  &:focus-within > .modal-form__text,
+  &:focus-within {
+    fill: var(--highlight-color);
+    border-color: var(--highlight-color);
+  }
+}
+
+.modal-form__span {
+  position: absolute;
+  left: 0;
+  top: -18px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--description-text-color);
+}
+
+.modal-form__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  background-color: transparent;
+  padding-left: 42px;
+
+  transition: border-color 250ms var(--timing-function);
+  /* ///// подсветка строк при заполнении ///// */
+  &:placeholder-shown {
+    background-color: transparent;
+  }
+  &:not(:placeholder-shown):not(:focus):valid {
+    background-color: rgba(108, 255, 186, 0.493);
+  }
+  &:not(:placeholder-shown):not(:focus):invalid {
+    background-color: rgba(255, 91, 91, 0.856);
+  }
+}
+
+.modal-form__svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+  transition: fill 250ms var(--timing-function);
+}
+
+.modal-form__text {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  background-color: transparent;
+  padding: 12px 16px;
+
+  transition: border-color 250ms var(--timing-function);
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+}
+.checkbox__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--description-text-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.checkbox__icon-box {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 250ms var(--timing-function);
+}
+.checkbox__icon-check {
+  margin-right: 7px;
+  opacity: 0;
+  transition: opacity 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+}
+/* ---прячем и убираем из потока--- */
+.checkbox__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  &:checked + .checkbox__icon-box {
+    opacity: 0;
+  }
+  &:checked ~ .checkbox__icon-check {
+    opacity: 1;
+  }
+  &:focus + .checkbox__icon-box {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+  }
+}
+
+.checkbox__policy {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--highlight-color);
+}
