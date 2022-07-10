@@ -26,6 +26,10 @@
   margin-bottom: 30px;
 }
 .details-box__title {
+  text-align: center;
+  @include tablet {
+    text-align: left;
+  }
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
