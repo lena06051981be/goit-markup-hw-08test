@@ -1,7 +1,7 @@
 .team-section {
   background: var(--description-background-color);
   padding: 60px 0;
-  @include display {
+  @include desktop {
     padding: 94px 0;
   }
 }
