@@ -54,6 +54,13 @@ button:focus,
   outline: currentColor;
 }
 
+img {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+}
+
 /* Переменные: цвета и прочее */
 :root {
   --main-color: #212121;
@@ -407,14 +414,19 @@ h1[class=visually-hidden] {
   background: var(--description-background-color);
   padding: 94px 0;
 }
+@media screen and (min-width: 768px) {
+  .team-section {
+    padding: 94px 0;
+  }
+}
 
 .team-title {
-  font-size: 36px;
-  line-height: 1.17;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--main-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .team-list {
@@ -429,6 +441,16 @@ h1[class=visually-hidden] {
   background: var(--main-tittle-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .team {

@@ -1,10 +1,20 @@
 .team-section {
   background: var(--description-background-color);
-  padding: 94px 0;
+  padding: 60px 0;
+  @include display {
+    padding: 94px 0;
+  }
 }
 
 .team-title {
-  @include hsecond-title();
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+
+  // @include hsecond-title();
 }
 
 .team-list {
@@ -14,6 +24,12 @@
 }
 .team-list__item {
   width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
   // width: 270px;
   text-align: center;
   background: var(--main-tittle-color);
