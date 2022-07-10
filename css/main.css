@@ -295,21 +295,28 @@ h1[class=visually-hidden] {
 
 .description {
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--typical-margin);
 }
 
 .description__li {
-  width: 270px;
-  margin-right: var(--typical-margin);
+  width: 100%;
 }
-.description__li:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .description__li {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .description__li {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .details-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
   background: var(--description-background-color);
   border-radius: 4px;
@@ -335,6 +342,11 @@ h1[class=visually-hidden] {
 
 .activity-section {
   padding-bottom: 94px;
+}
+@media screen and (max-width: 1199px) {
+  .activity-section {
+    display: none;
+  }
 }
 
 .activity-title {
