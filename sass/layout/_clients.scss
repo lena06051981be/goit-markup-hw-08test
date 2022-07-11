@@ -11,7 +11,16 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @include desktop {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    // text-align: center;
+    // letter-spacing: 0.03em;
+    // color: var(--main-color);
+    margin-bottom: 50px;
+  }
 
   @include desktop {
     @include hsecond-title();
