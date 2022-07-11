@@ -87,5 +87,8 @@
     <symbol id="icon-send" viewBox="0 0 32 32">
       <path d="M32 0l-32 18 10.227 3.787 15.773-14.787-11.997 16.187 0.009 0.003-0.012-0.003v8.813l5.735-6.691 7.267 2.691 4.999-28z"></path>
     </symbol>
+    <symbol id="mob-menu-open" viewBox="0 0 48 32">
+      <path d="M0 5.334v-5.334h48v5.334h-48zM0 18.666h48v-5.332h-48v5.332zM0 32h48v-5.334h-48v5.334z"></path>
+    </symbol>
   </defs>
 </svg>

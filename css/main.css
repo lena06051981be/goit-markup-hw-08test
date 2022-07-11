@@ -150,7 +150,7 @@ h1[class=visually-hidden] {
 }
 @media screen and (min-width: 480px) {
   .header {
-    padding: 16px 0;
+    padding: 10px 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -288,6 +288,22 @@ h1[class=visually-hidden] {
 .contacts__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+
+.mob-menu-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: inherit;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu-open {
+    display: none;
+  }
 }
 
 /* main / hero */

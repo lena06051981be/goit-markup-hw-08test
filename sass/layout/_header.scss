@@ -3,7 +3,7 @@
 .header {
   border-bottom: 1px solid var(--header-bottom);
   @include mobile {
-    padding: 16px 0;
+    padding: 10px 0;
   }
   @include tablet {
     padding: 21px 0;
@@ -24,6 +24,9 @@
 .nav {
   display: flex;
   align-items: center;
+  // @include mobile {
+  //   justify-content: space-between;
+  // }
 }
 
 .logo {
