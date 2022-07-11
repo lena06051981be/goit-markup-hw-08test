@@ -10,4 +10,10 @@
   @include tablet {
     display: none;
   }
+
+  transition: fill 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    fill: var(--highlight-color);
+  }
 }
