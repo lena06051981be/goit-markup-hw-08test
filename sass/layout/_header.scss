@@ -2,13 +2,26 @@
 
 .header {
   border-bottom: 1px solid var(--header-bottom);
-  padding-top: 24px;
-  padding-bottom: 25px;
+  @include mobile {
+    padding: 16px 0;
+  }
+  @include tablet {
+    padding: 21px 0;
+  }
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
-.header .container,
-.nav,
-.menu {
+// .header .container,
+// .nav,
+// .menu {
+//   display: flex;
+//   align-items: center;
+// }
+.header > .container,
+.nav {
   display: flex;
   align-items: center;
 }
@@ -17,10 +30,22 @@
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
+.menu {
+  display: none;
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .nav__logo {
   color: #000000;
   margin-right: 93px;
@@ -66,7 +91,10 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -32.5px;
+    bottom: -34.5px;
+    @include desktop {
+      bottom: -32.5px;
+    }
 
     display: block;
     width: 100%;
@@ -78,11 +106,25 @@
 }
 
 .contacts {
-  display: flex;
-  margin-left: auto;
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+
+    // justify-content: flex-end;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .contacts__item:not(:first-child) {
-  margin-left: 30px;
+  margin-top: 10px;
+  @include desktop {
+    margin-top: 0;
+    margin-left: 30px;
+  }
 }
 .contacts__link {
   display: flex;
