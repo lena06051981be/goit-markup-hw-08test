@@ -1,4 +1,4 @@
-.mob-menu-open {
+.menu-button-open {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,6 +6,7 @@
   background-color: inherit;
   width: 40px;
   height: 40px;
+  padding: 0;
   margin-left: auto;
   @include tablet {
     display: none;
@@ -16,4 +17,42 @@
   &:focus {
     fill: var(--highlight-color);
   }
+}
+.mob-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--footer-contact-color);
+  padding: 48px 0;
+}
+.menu-button-close {
+  display: flex;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  right: 15px;
+  top: 10px;
+  &:hover,
+  &:focus {
+    fill: var(--highlight-color);
+  }
+}
+.mob-menu {
+}
+.mob-menu__item {
+}
+.mob-menu__link {
+}
+.mob-contacts {
+}
+.mob-contacts__item {
+}
+.mob-contacts__link {
+}
+.mob-networks {
+}
+.mob-networks__item {
 }

@@ -290,7 +290,7 @@ h1[class=visually-hidden] {
   fill: currentColor;
 }
 
-.mob-menu-open {
+.menu-button-open {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,15 +298,39 @@ h1[class=visually-hidden] {
   background-color: inherit;
   width: 40px;
   height: 40px;
+  padding: 0;
   margin-left: auto;
   transition: fill 250ms var(--timing-function);
 }
 @media screen and (min-width: 768px) {
-  .mob-menu-open {
+  .menu-button-open {
     display: none;
   }
 }
-.mob-menu-open:hover, .mob-menu-open:focus {
+.menu-button-open:hover, .menu-button-open:focus {
+  fill: var(--highlight-color);
+}
+
+.mob-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--footer-contact-color);
+  padding: 48px 0;
+}
+
+.menu-button-close {
+  display: flex;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  right: 15px;
+  top: 10px;
+}
+.menu-button-close:hover, .menu-button-close:focus {
   fill: var(--highlight-color);
 }
 
