@@ -8,11 +8,20 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
 
+  // visibility: visible;
+  // overflow-y: scroll;
+  // z-index: 100;
+  // transform: scaleY(1);
+  // transition: all 0.4s ease;
+
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
+
+    // visibility: hidden;
+    // transform: scaleY(0);
     & .modal {
       transform: translate(-50%, -50%) scale(0.5);
     }
@@ -24,8 +33,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
+  max-width: 450px;
+  width: 100%;
+
+  min-height: 609px;
+
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+  }
   background: var(--main-tittle-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -33,6 +49,9 @@
   padding: 40px;
 
   transition: 250ms var(--timing-function);
+}
+.modal-icon {
+  transition: transform 0.3s linear, fill 0.3s linear;
 }
 .modal-close-btn {
   position: absolute;
@@ -46,7 +65,10 @@
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  &:hover .modal-icon {
+
+  &:hover .modal-icon,
+  &:focus .modal-icon {
+    transform: rotate(90deg);
     fill: var(--highlight-color);
   }
 }
@@ -64,7 +86,10 @@
 .modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: calc(23 / 20);
+  line-height: calc(30 / 20);
+  @include desktop {
+    line-height: calc(23 / 20);
+  }
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
@@ -130,6 +155,9 @@
   resize: none;
   background-color: transparent;
   padding: 12px 16px;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.01em;
 
   transition: border-color 250ms var(--timing-function);
 }
@@ -140,8 +168,12 @@
 }
 .checkbox__label {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   letter-spacing: 0.03em;
   color: var(--description-text-color);
   display: flex;
@@ -189,8 +221,12 @@
 
 .checkbox__policy {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--highlight-color);

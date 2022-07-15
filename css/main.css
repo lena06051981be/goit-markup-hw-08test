@@ -946,13 +946,24 @@ h1[class=visually-hidden] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
+  max-width: 450px;
+  width: 100%;
+  min-height: 609px;
   background: var(--main-tittle-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
   transition: 250ms var(--timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
+}
+
+.modal-icon {
+  transition: transform 0.3s linear, fill 0.3s linear;
 }
 
 .modal-close-btn {
@@ -968,7 +979,8 @@ h1[class=visually-hidden] {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.modal-close-btn:hover .modal-icon {
+.modal-close-btn:hover .modal-icon, .modal-close-btn:focus .modal-icon {
+  transform: rotate(90deg);
   fill: var(--highlight-color);
 }
 
@@ -985,10 +997,15 @@ h1[class=visually-hidden] {
 .modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 .modal-form__label {
@@ -1047,6 +1064,9 @@ h1[class=visually-hidden] {
   resize: none;
   background-color: transparent;
   padding: 12px 16px;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  letter-spacing: 0.01em;
   transition: border-color 250ms var(--timing-function);
 }
 
@@ -1057,14 +1077,20 @@ h1[class=visually-hidden] {
 
 .checkbox__label {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--description-text-color);
   display: flex;
   align-items: center;
   margin-bottom: 30px;
   position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox__icon-box {
@@ -1105,11 +1131,17 @@ h1[class=visually-hidden] {
 
 .checkbox__policy {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--highlight-color);
+}
+@media screen and (min-width: 1200px) {
+  .checkbox__policy {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .portfolio-btn-list {
