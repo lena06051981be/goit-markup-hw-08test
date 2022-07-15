@@ -83,60 +83,62 @@
             <use href="./images/icons.svg#mob-menu-open"></use>
           </svg>
         </button>
-        <div class="mob-modal">
+        <div class="mob-modal is-hidden">
           <div class="mob-modal__container">
-          <button type="button" class="menu-button-close">
-            <svg class="menu-close-icon" width="40" height="40">
-              <use href="./images/icons.svg#mob-menu-close"></use>
-            </svg>
-          </button>
-          <ul class="mob-menu">
-            <li class="mob-menu__item">
-              <a href="./index.html" class="mob-menu__link mob-menu--stream">Студия</a>
-            </li>
-            <li class="mob-menu__item">
-              <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
-            </li>
-            <li class="mob-menu__item">
-              <a href="" class="mob-menu__link">Контакты</a>
-            </li>
-          </ul>
-          <div>
-          <ul class="mob-contacts">
-            <li class="mob-contacts__item">
-              <a
-                href="tel:+380961111111"
-                title="Mobile phone"
-                class="mob-contacts__mobile"
-              >
-                +38 096 111 11 11</a
-              >
-            </li>
-            <li class="mob-contacts__item">
-              <a
-                href="mailto:info@devstudio.com"
-                title="E-mail"
-                class="mob-contacts__email"
-              >
-                info@devstudio.com</a
-              >
-            </li>
-          </ul>
-          <ul class="mob-networks">
-            <li class="mob-networks__item">
-              <a href="" class="mob-networks">Instagram</a>
-            </li>
-            <li class="mob-networks__item">
-              <a href="" class="mob-networks">Twitter</a>
-            </li>
-            <li class="mob-networks__item">
-              <a href="" class="mob-networks">Facebook</a>
-            </li>
-            <li class="mob-networks__item">
-              <a href="" class="mob-networks">LinkedIn</a>
-            </li>
-          </ul>
-          </div>
+            <button type="button" class="menu-button-close">
+              <svg class="menu-close-icon" width="40" height="40">
+                <use href="./images/icons.svg#mob-menu-close"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu">
+              <li class="mob-menu__item">
+                <a href="./index.html" class="mob-menu__link mob-menu--stream"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link">Портфолио</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link">Контакты</a>
+              </li>
+            </ul>
+            <div>
+              <ul class="mob-contacts">
+                <li class="mob-contacts__item">
+                  <a
+                    href="tel:+380961111111"
+                    title="Mobile phone"
+                    class="mob-contacts__mobile mob-contacts__link"
+                  >
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-contacts__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    title="E-mail"
+                    class="mob-contacts__email mob-contacts__link"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mob-networks">
+                <li class="mob-networks__item">
+                  <a href="" class="mob-networks">Instagram</a>
+                </li>
+                <li class="mob-networks__item">
+                  <a href="" class="mob-networks">Twitter</a>
+                </li>
+                <li class="mob-networks__item">
+                  <a href="" class="mob-networks">Facebook</a>
+                </li>
+                <li class="mob-networks__item">
+                  <a href="" class="mob-networks">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -649,5 +651,6 @@
       AOS.init();
     </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

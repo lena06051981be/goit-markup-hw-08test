@@ -366,11 +366,19 @@ h1[class=visually-hidden] {
   color: var(--highlight-color);
 }
 
+.mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--highlight-color);
+}
+
 .mob-contacts {
   display: flex;
   flex-direction: column;
   gap: var(--typical-margin);
   margin-bottom: 64px;
+}
+
+.mob-contacts__link:hover, .mob-contacts__link:focus {
+  color: var(--highlight-color);
 }
 
 .mob-contacts__mobile {

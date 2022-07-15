@@ -80,6 +80,10 @@
 //   margin-bottom: 0;
 // }
 .mob-menu__link {
+  &:hover,
+  &:focus {
+    color: var(--highlight-color);
+  }
 }
 .mob-contacts {
   display: flex;
@@ -88,7 +92,11 @@
   margin-bottom: 64px;
 }
 
-.mob-contacts__item {
+.mob-contacts__link {
+  &:hover,
+  &:focus {
+    color: var(--highlight-color);
+  }
 }
 .mob-contacts__mobile {
   font-weight: 500;
