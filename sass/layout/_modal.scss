@@ -39,7 +39,7 @@
   min-height: 609px;
 
   @include desktop {
-    width: 528px;
+    max-width: 528px;
     min-height: 581px;
   }
   background: var(--main-tittle-color);
@@ -230,4 +230,8 @@
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--highlight-color);
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
 }
