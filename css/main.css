@@ -416,7 +416,7 @@ h1[class=visually-hidden] {
 /* main / hero */
 .main {
   background: var(--footer-background-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_img.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/HeroMob1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -432,18 +432,31 @@ h1[class=visually-hidden] {
   .main {
     max-width: 480px;
     padding: 118px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/HeroMob1x.jpg);
+  }
+}
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .main {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/HeroMob2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .main {
     max-width: 768px;
     padding: 118px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/HeroTab1x.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .main {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/HeroTab2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .main {
     max-width: 1600px;
     padding: 200px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/HeroDesk1x.jpg);
   }
 }
 
