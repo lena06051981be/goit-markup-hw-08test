@@ -782,6 +782,26 @@ h1[class=visually-hidden] {
 
 .footer .container {
   display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .footer .container {
+    flex-direction: unset;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__box-address {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__box-address {
+    align-items: unset;
+    margin-bottom: 0;
+  }
 }
 
 .logo--footer {
@@ -795,6 +815,14 @@ h1[class=visually-hidden] {
 .contacts-footer {
   background: var(--footer-background-color);
   font-style: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .contacts-footer {
+    align-items: flex-start;
+  }
 }
 
 .contacts-footer__item:not(:last-child) {
@@ -830,6 +858,9 @@ h1[class=visually-hidden] {
 
 /* --NEW-- */
 .footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: 70px;
   padding-top: 12px;
 }
