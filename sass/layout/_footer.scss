@@ -10,7 +10,8 @@
   @include tablet {
     flex-direction: unset;
     flex-wrap: wrap;
-    // align-items: unset;
+    justify-content: center;
+    // align-items: center;
   }
 }
 
@@ -76,10 +77,19 @@
 /* --NEW-- */
 .footer-contacts {
   display: flex;
-flex-direction: column;
-align-items: center;
-  margin-left: 70px;
-  padding-top: 12px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  @include tablet {
+    margin-left: 165px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  @include desktop {
+    align-items: unset;
+    margin-left: 70px;
+    padding-top: 7px;
+  }
 }
 .footer-invite {
   text-transform: uppercase;
@@ -88,7 +98,6 @@ align-items: center;
   letter-spacing: 0.03em;
   color: var(--footer-contact-color);
   margin-bottom: 20px;
-  
 }
 .footer-social-networks {
   display: flex;
@@ -123,9 +132,16 @@ align-items: center;
 /* --- MAILING LIST FOOTER --- */
 
 .mailing-list {
-  margin-left: 93px;
-  margin-top: 12px;
-  display: block;
+  // display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    margin-left: 93px;
+    margin-top: 12px;
+    //  flex-direction: row;
+    align-items: flex-start;
+  }
 }
 .mailing-list__title {
   font-weight: 700;
@@ -138,9 +154,19 @@ align-items: center;
 }
 .mailing {
   display: flex;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+  } 
+}
+.mailing__label {
+  margin-bottom: 20px;
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 .mailing__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -149,7 +175,9 @@ align-items: center;
   padding-left: 16px;
   color: var(--footer-contact-color);
   margin-right: 12px;
-
+@include desktop {
+  width: 358px;
+}
   &:hover,
   &:focus {
     border-color: var(--highlight-color);
