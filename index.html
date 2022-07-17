@@ -216,15 +216,39 @@
           <h2 class="activity-title">Чем мы занимаемся</h2>
           <ul class="activity">
             <li class="activity__li">
-              <img src="./images/box_1.jpg" alt="logic" width="370" />
+              <img
+                srcset="
+                  ./images/activity/Activity1Desk1x.jpg 1x,
+                  ./images/activity/Activity1Desk2x.jpg 2x
+                "
+                src="./images/activity/Activity1Desk1x.jpg"
+                alt="logic"
+                width="370"
+              />
               <p class="activity__text">Десктопные приложения</p>
             </li>
             <li class="activity__li">
-              <img src="./images/box_2.jpg" alt="styles" width="370" />
+              <img
+                srcset="
+                  ./images/activity/Activity2Desk1x.jpg 1x,
+                  ./images/activity/Activity2Desk2x.jpg 2x
+                "
+                src="./images/activity/Activity2Desk1x.jpg"
+                alt="styles"
+                width="370"
+              />
               <p class="activity__text">Мобильные приложения</p>
             </li>
             <li class="activity__li">
-              <img src="./images/box_3.jpg" alt="themes" width="370" />
+              <img
+                srcset="
+                  ./images/activity/Activity3Desk1x.jpg 1x,
+                  ./images/activity/Activity3Desk2x.jpg 2x
+                "
+                src="./images/activity/Activity3Desk1x.jpg"
+                alt="themes"
+                width="370"
+              />
               <p class="activity__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -235,11 +259,35 @@
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img
-                src="./images/team_card_1.jpg"
-                alt="Product Designer"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/Team1Desk1x.jpg 1x,
+                    ./images/team/Team1Desk2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/Team1Tab1x.jpg 1x,
+                    ./images/team/Team1Tab2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/Team1Mob1x.jpg 1x,
+                    ./images/team/Team1Mob2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/Team/Team1Mob1x.jpg"
+                  alt="Product Designer"
+                  width="450"
+                />
+              </picture>
+
               <div class="team">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__position">Product Designer</p>
@@ -448,7 +496,7 @@
       </section>
     </main>
     <!-- footer -->
-     <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer__box-address">
           <div class="footer__div-logo">
@@ -558,7 +606,7 @@
           </form>
         </div>
       </div>
-    </footer> 
+    </footer>
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -631,8 +679,8 @@
                 <use href="./images/icons.svg#icon-checkbox"></use>
               </svg>
               <svg class="checkbox__icon-check" width="16" height="15">
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>Соглашаюсь с рассылкой и принимаю&nbsp;<a
+                <use href="./images/icons.svg#icon-check"></use></svg
+              >Соглашаюсь с рассылкой и принимаю&nbsp;<a
                 href=""
                 class="checkbox__policy"
                 target="_blank"
