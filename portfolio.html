@@ -260,12 +260,36 @@
             <li class="services__item">
               <a href="" class="services__link">
                 <div class="services__item-wrap">
-                  <img
-                    src="./images/portfolio_services_3.jpg"
+                  <picture>
+                     <source
+                      srcset="
+                        ./images/projects/Project3Desk1x.jpg 1x,
+                        ./images/projects/Project3Desk2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project3Tab1x.jpg 1x,
+                        ./images/projects/Project3Tab2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/Project3Mob1x.jpg 1x,
+                        ./images/projects/Project3Mob2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+                    <img
+                    src="./images/projects/Project3Mob1x.jpg"
                     alt="Seafood"
                     width="370"
                     class="services__img-portfolio"
                   />
+                  </picture>
+                  
                   <p class="services__item-text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
