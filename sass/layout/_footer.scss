@@ -5,13 +5,11 @@
 }
 .footer .container {
   display: flex;
-  // align-items: center;
   flex-direction: column;
   @include tablet {
     flex-direction: unset;
     flex-wrap: wrap;
     justify-content: center;
-    // align-items: center;
   }
 }
 
@@ -157,7 +155,7 @@
   flex-direction: column;
   @include desktop {
     flex-direction: row;
-  } 
+  }
 }
 .mailing__label {
   margin-bottom: 20px;
@@ -175,9 +173,9 @@
   padding-left: 16px;
   color: var(--footer-contact-color);
   margin-right: 12px;
-@include desktop {
-  width: 358px;
-}
+  @include desktop {
+    width: 358px;
+  }
   &:hover,
   &:focus {
     border-color: var(--highlight-color);
